@@ -393,8 +393,16 @@
 
 {#if $user}
 	<div class="app relative">
+		<!-- Freiheit Media – custom branding banner (added for internal deployment) -->
 		<div
-			class=" text-gray-700 dark:text-gray-100 bg-white dark:bg-gray-900 h-screen max-h-[100dvh] overflow-auto flex flex-row justify-end"
+			class="freiheit-banner w-full h-8 flex items-center justify-center gap-2 px-4 text-xs sm:text-sm font-medium text-white bg-[#4F46E5] shadow-sm z-50 select-none"
+		>
+			<span>🛡️ Freiheit Media – Internal LLM</span>
+			<span class="opacity-60">·</span>
+			<span class="opacity-90">Environment: Local Test</span>
+		</div>
+		<div
+			class=" text-gray-700 dark:text-gray-100 bg-white dark:bg-gray-900 h-[calc(100dvh-2rem)] max-h-[calc(100dvh-2rem)] overflow-auto flex flex-row justify-end"
 		>
 			{#if !['user', 'admin'].includes($user?.role)}
 				<AccountPending />
