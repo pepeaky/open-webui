@@ -23,6 +23,8 @@ services:
     environment:
       - 'OLLAMA_BASE_URL=http://ollama:11434'
       - 'WEBUI_SECRET_KEY='
+      # Internal tool language: default the UI to English regardless of browser locale
+      - 'DEFAULT_LOCALE=en-US'
     extra_hosts:
       - host.docker.internal:host-gateway
     restart: unless-stopped
